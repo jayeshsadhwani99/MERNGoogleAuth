@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MERN Demo</title>
+  </head>
+  <body>
+    <h1>Login Using Google</h1>
+    <% if(user == undefined) { %>
+    <p>Just Press The button Below</p>
+    <form method="GET" action="/google">
+      <button>Continue with Google</button>
+    </form>
+    <% } else { %>
+    <p>Welcome <%= user.displayName %></p>
+    <form method="GET" action="/logout">
+      <button>Logout</button>
+    </form>
+    <% } %>
+  </body>
+</html>
